@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,26 +22,31 @@ import java.util.regex.Pattern;
 @NoArgsConstructor
 public class Customer {
     @Id
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("user_id")
     @Email
     private String userId;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("name")
     private String name;
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("phone")
     private String phone;
 
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("address")
     private String address;
 
@@ -48,15 +54,18 @@ public class Customer {
     @JsonProperty("address2")
     private String address2;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("city")
     private String city;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("state")
     private String state;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("zipcode")
     private String zipcode;
 

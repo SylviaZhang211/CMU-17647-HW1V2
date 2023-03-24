@@ -4,6 +4,7 @@ package com.example.hw1v2.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,30 +16,37 @@ import org.springframework.lang.NonNull;
 @NoArgsConstructor
 public class Book {
     @Id
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("ISBN")
     private String ISBN;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("title")
     private String title;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("Author")
     private String Author;
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("description")
     private String description;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("genre")
     private String genre;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("price")
     private double price;
 
-    @NonNull
+    //@NonNull
+    @NotNull
     @JsonProperty("quantity")
     private int quantity;
 

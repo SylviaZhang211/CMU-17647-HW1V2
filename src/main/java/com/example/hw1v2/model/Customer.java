@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 public class Customer {
     @Id
     //@NonNull
-    @NotNull
     @JsonProperty("id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -31,7 +30,7 @@ public class Customer {
 
     //@NonNull
     @NotNull
-    @JsonProperty("user_id")
+    @JsonProperty("userId")
     @Email
     private String userId;
 

@@ -1,6 +1,8 @@
 package com.example.hw1v2.utils;
 
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Validation {
 
@@ -14,11 +16,16 @@ public class Validation {
 
     }
 
-//    public boolean checkEmail(String userId){
-//        Pattern pattern = Pattern.compile("^(.+)@(\\\\S+)$");
-//        Matcher matcher = pattern.matcher(userId);
-//        return !matcher.matches();
-//    }
+    private static final String EMAIL_REGEX =
+            "^[a-zA-Z0-9_+&*-]+(?:\\." +
+                    "[a-zA-Z0-9_+&*-]+)*@" +
+                    "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                    "A-Z]{2,7}$";
 
+    public static boolean checkEmail(String email) {
+        Pattern pattern = Pattern.compile(EMAIL_REGEX);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
 
 }

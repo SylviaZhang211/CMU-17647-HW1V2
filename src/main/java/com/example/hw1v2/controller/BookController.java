@@ -15,17 +15,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/books")
 public class BookController {
-//    @PostMapping("books")
-//    public String addBook(){
-//
-//    }
+
     @Autowired
     BookService bookService ;
 
 
 
 
-    //@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     @PostMapping("")
     public ResponseEntity<?> addBook(@Valid @RequestBody Book book, BindingResult bindingResult){
         if (bindingResult.hasErrors()){

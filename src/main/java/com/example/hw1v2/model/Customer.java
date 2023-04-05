@@ -18,7 +18,6 @@ import java.util.regex.Pattern;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("customer")
 public class Customer {
     @Id
     //@NonNull

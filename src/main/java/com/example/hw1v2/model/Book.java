@@ -15,7 +15,6 @@ import org.springframework.lang.NonNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table("book")
 public class Book {
     @Id
     //@NonNull

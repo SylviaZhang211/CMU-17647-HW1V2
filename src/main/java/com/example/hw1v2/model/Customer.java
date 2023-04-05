@@ -1,15 +1,13 @@
 package com.example.hw1v2.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.lang.NonNull;
 
 import java.util.Set;
@@ -20,6 +18,7 @@ import java.util.regex.Pattern;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table("customer")
 public class Customer {
     @Id
     //@NonNull

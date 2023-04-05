@@ -8,12 +8,14 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.lang.NonNull;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table("book")
 public class Book {
     @Id
     //@NonNull

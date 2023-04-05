@@ -1,11 +1,10 @@
 Server:
   Port: 8080
-
 spring:
   jpa:
     hibernate:
       ddl-auto: none
-#       // dialect: org.hibernate.dialect.MySQL8Dialect
+      dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
     url: jdbc:mysql://cmu-17647-hw2-databasereplicainstance-tarvjn8jk2lz.crvoqcxxien2.us-east-1.rds.amazonaws.com/Scalable_A1
     username: sylviahw2
